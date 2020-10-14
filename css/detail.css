@@ -1,0 +1,356 @@
+@charset "utf-8";
+/*detail.css - 디테일 페이지 CSS*/
+
+*{
+    outline: 1px dashed red;
+}
+
+#dt_main_wrap{
+    width: 100%;
+}
+
+#detail_content_wrap{
+    width: 100%;
+    
+}
+#tumb_info_wrap{
+    background-color: #f5f5f5;
+    height: 740px;/*임의로 준 크기*/
+}
+.tumb_info_area{
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.tumb_info_content{
+    display: flex;
+}
+.tumb_info_content>div{
+    width:50%;
+}
+.preview_wrap{
+    display: flex;
+    justify-content: center;
+}
+.preview_thumbnail{
+    margin-right: 4%;
+}
+
+.preview_thumbnail li{
+    margin-top:50px;
+}
+.preview_thumbnail li a{
+    display: block;
+    width: 70px;
+    height:70px;
+}
+.preview_thumbnail li:nth-child(1) a{
+    background: url(../images/sofa_table/preview/preview_02.jpg) no-repeat center / cover;
+}
+.preview_thumbnail li:nth-child(2) a{
+    background: url(../images/sofa_table/preview/preview_03.jpg) no-repeat center / cover;
+}
+.preview_thumbnail li:nth-child(3) a{
+    background: url(../images/sofa_table/preview/preview_04.png) no-repeat center / cover;
+}
+
+
+.main_preview{
+    width:490px;
+    height:490px;
+    background: url(../images/sofa_table/preview/preview_01.jpg) no-repeat center / cover;
+}
+
+
+/*******************/
+.buy_info_wrap{
+    width: 100%;
+}
+
+.product_kind{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.product_tit{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.buy_price{
+    font-size: 2.125rem;
+    font-weight: 600;
+    position: relative;
+    line-height: 70px;
+}
+.buy_price span{
+    color: #ABBC89;
+    font-weight: 500;
+}
+.buy_price::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 70px;
+    height: 2px;
+    background-color: #2d2d2d;
+}
+.product_txt{
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 16px;
+    line-height: 20px;
+    
+}
+.color{
+    padding:30px 0;
+    font-size: 2.25rem;
+    font-weight: 500;
+}
+.color small{
+    color: #979797;
+}
+.color_preview{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 2%;
+    margin-bottom: 20px;
+}
+
+.color_preview span{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background: url(../images/sofa_table/color_deteil.jpg) no-repeat center / cover;
+}
+.sale_label{
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 24px;
+    color: #7A8556;
+    border:3px solid #7A8556;
+    margin-bottom: 4%;
+}
+.amont_buy_btn_wrap{
+    width: 100%;
+    padding-top: 4%;
+    border-top:1px solid #E2E2E2;
+    display: flex;
+}
+.amont_updown{
+}
+
+.amont_updown dl, .amont_buy_btn_wrap button a{
+    height: 46px;
+}
+    
+
+.amont_updown dl{
+    width: 110px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 2px solid #e6e6e6;
+}
+.amont_updown dt, .amont_updown dd{
+    flex: 1;
+    text-align: center;
+    line-height: 46px;
+}
+.amont_updown dt{
+    border-right:1px solid #e6e6e6;
+}
+
+.opt_btns{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.opt_btns a{
+    height: 50%;
+    line-height: 23px;
+}
+.opt_btns a:first-child{
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.amont_buy_btn_wrap button{
+    border: 0;
+    background: none;
+    margin-left:20px;
+}
+.amont_buy_btn_wrap button a{
+    display: block;
+    font-family: 'Khand', sans-serif;
+    width: 200px;
+    background-color: #7A8556;
+    border-radius: 6px;
+    line-height: 46px;
+    color: #fff;
+    font-size: 1.875rem;
+}
+.addcart{
+    display: block;
+    padding:10px 0;
+    font-size: 1.625rem;
+}
+.addcart span{
+    display: inline-block;
+    width:20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2d2d2d;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+
+
+
+/***상세페이지***/
+
+
+
+
+#detail_page_wrap{
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.page_wrap_txt{
+    text-align: center;
+    font-size: 3.75rem;
+    font-weight: 500;
+    position: relative;
+    width: 300px;
+    margin: 80px auto;
+}
+.page_wrap_txt::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 0;
+    width: 360px;
+    height:2px;
+    transform: translateX(-50%);
+    background-color: #2d2d2d;
+}
+
+.dt_img1_wrap{
+    position: relative;
+}
+.dt_img1{
+    width: 800px;
+    height: 900px;
+    background: url(../images/sofa_table/dt_page_01.jpg) no-repeat center / cover;
+    margin: 0 0 0 auto;
+}
+.dt_img1_tbox{
+    position: absolute;
+    top: 20%;
+    left: 16%;
+}   
+.dt_img1_tbox h3{
+    font-size: 7.25rem;
+    font-weight: 500;
+    margin-bottom: 100px;
+}
+.dt_img1_tbox p{
+    font-size: 2.375rem;
+    font-weight: 300;
+    line-height: 80px;
+    letter-spacing: 10px;
+}
+
+
+.dt_img2_wrap{
+    display: flex;
+}
+.dt_img2{
+    width: 400px;
+    height: 600px;
+    background: url(../images/sofa_table/edge_detail.jpg) no-repeat center / cover;
+    margin-left: 10%;
+}
+
+.dt_img3_wrap{
+    margin-top: 280px;
+    width: 100%;
+    height: 800px;
+    background: url(../images/sofa_table/dt_page_02.jpg) no-repeat center / cover;
+    text-align: center;
+}
+.dt_img4_wrap{
+    position: relative;
+    height:1400px;/*임의로 준 크기*/
+}
+.Heritage{
+    text-align: right;
+}
+.img4_fir, .img4_sec, .img4_thi{
+    position: absolute;
+}
+.img4_fir{
+    width: 640px;
+    height: 380px;
+    background: url(../images/sofa_table/detail_01.jpg) no-repeat center / cover;
+}
+
+.img4_sec{
+    width: 500px;
+    height: 660px;
+    background: url(../images/sofa_table/detail_02.jpg) no-repeat center / cover;
+}
+.img4_thi{
+    width: 700px;
+    height: 540px;
+    background: url(../images/sofa_table/sofa_table_02.jpg) no-repeat center / cover;
+}
+
+.dt_img5_wrap{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    height:800px;
+    background: url(../images/sofa_table/dt_page_bg.jpg) no-repeat center / cover;
+    
+}
+.img_5{
+    position: absolute;
+    left:50%;
+    top: 74%;
+    width: 80%;
+    height: 700px;
+    background: #fff url(../images/sofa_table/sofa_table_01.png) no-repeat center / cover;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.info_color_wrap{
+    margin-top: 700px;
+    position: relative;
+    height:1000px;/*임시로 준 높이*/
+}
+
+.info_color_wrap>div{
+    border:4px solid #2d2d2d;
+    position: absolute;
+}
+.info_wrap{
+    width: 800px;
+    height: 500px;
+}
+
+.color_wrap{
+    width: 600px;
+    height: 400px;
+}
+.precautions{
+    text-align: center;
+}

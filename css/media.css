@@ -1,0 +1,397 @@
+@charset "utf-8";
+/* 포트폴리오 미디어쿼리 - media.css */
+
+
+
+
+/*********** 수정할 사항***************/
+/*
+ 테블릿 view부터 100% 해제!
+
+*/
+
+/******************************/
+
+/*1200px이하 사이즈*/
+
+@media only screen and (max-width:1920px) {
+    .gnb {
+            font-size: 1.25rem;
+        }
+
+}
+@media only screen and (max-width:1280px) {
+
+    /*
+    전체글자조정
+    rem으로 코딩된 사이즈는 
+    root인 html의 글자크기를
+    기준으로 변경된다!*/
+     /*html {
+        font-size: 15px;
+    }*/
+    
+    .about_main_img{
+        width: 60%;
+    }
+
+}
+
+@media only screen and (max-width:1250px) {
+
+    /*
+    전체글자조정
+    rem으로 코딩된 사이즈는 
+    root인 html의 글자크기를
+    기준으로 변경된다!*/
+     html {
+        font-size: 14.5px;
+    }
+}
+
+/*1200px이하*/
+
+
+/*1100px 이하 미디어쿼리*/
+@media all and (max-width:1110px) {
+
+    /*전체글자크기*/
+    html {
+        font-size: 14px;
+    }
+    
+    header h1 {
+        left: 2%;
+        top :24%;
+    }
+    
+    .gnb{
+        bottom: 54px;
+        
+    }
+    .gnb a{
+        margin-left: 2.075rem;
+    }
+    
+    .btn_change>div {
+        display: none;
+    }
+    
+    
+    /*about_us_list 비율*/
+    .about_us_list{
+        width: 800px;
+        max-width: 100%;
+        
+    }
+    
+
+    .sec_sub_tit {
+        text-align: center;
+        /* padding-top: 50px; */
+        padding-top: 2.125rem;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.125rem;
+        color: #d4d4d4;
+    }
+    
+    
+    /******work*****/
+    .tit_work {
+        text-align: center;
+        margin:auto auto;
+        background:none;
+    }
+        
+    .sec_tit.tit_work::after {
+        position: absolute;
+        content: '';
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 60px;
+        background-color: #81d6ea;
+    }
+    .work_area p {
+        text-align: center;
+    }    
+        
+}
+
+/*1100px이하*/
+
+@media only screen and (max-width:1080px) {
+    /*메뉴바 햄버거바로 변경!*/
+    .gnb{
+        display: none;
+    }
+    
+    .btn_change>div {
+        display: block;
+    }
+    
+    
+    .work_list {
+        width: 90%;
+    }
+    .work_arrow_wrap{
+        display: none;
+    }
+    
+}
+
+
+/*1024px 이하 미디어쿼리*/
+@media only screen and (max-width:1024px) {
+    
+    /*html {
+        font-size: 13.5px;
+    }*/
+    
+    .about_us_wrap, .service_wrap, .work_wrap{
+        height: auto;
+    }
+    
+    
+    header h1 {
+        left: 1%;
+    }
+    
+    .about_main_img {
+        width: 80%;
+    }
+    
+    .service_list li {
+        margin-top: 2%;
+    }
+    
+    .footer_area h4 {
+        padding-top: 5%;
+    }
+
+    /*
+        미디어쿼리 변경팁!!!
+        - 무조건 이미 설정된 선택자를 변경한다!
+        - 적용우선 순위를 걱정할 필요가 없다!
+    */
+    /*상단영역 높이변경*/
+    
+    /*로고 파티션박스 가로크기 변경*/
+    
+
+    /*gnb메뉴 숨기기*/
+
+    
+
+    /*햄버거버튼, 검색버튼 보이기*/
+    
+
+    /*컨텐츠 배너 배열변경하기
+    3,1-> 2,2*/
+    
+
+}
+
+
+/*1024px 이하 미디어쿼리*/
+
+@media all and (max-width:950px){
+    html{
+        font-size: 13px;
+    }
+    
+    header h1 {
+        left: 4%;
+    }
+    
+    
+    .left{
+        width: 0;
+    }
+    .right{
+        width: 70%;
+    }
+    .quick_menu{
+        padding: 1%;
+        background-color: rgba(255, 255, 255, 0.38);
+        border-radius: 20px;
+    }
+    
+    .main_tit_box {
+        margin-left: 10%;
+        padding: 50% 0 6% 0%;
+    }
+    .work_sc_btn {
+        margin-left: 30%;
+    }
+    
+}
+
+@media all and (max-width:900px){
+    html{
+        font-size: 12.5px;
+    }
+}
+
+
+@media all and (max-width:800px){
+    
+}
+
+
+
+@media all and (max-width:650px){
+    html{
+        font-size: 12px;
+    }
+    /*헤더 로고 left값 감소*/
+	
+	
+	.about_us_list > li{
+		width: 50%;
+	}
+	
+	
+}
+
+@media all and (max-width:590px){
+    .about_us_list{
+        width: 70%;
+        flex-wrap: wrap;
+    }
+    
+    .about_us_list li {
+    width: 50%;
+    }
+}
+
+
+@media all and (max-width:570px){
+    html{
+        font-size: 11px;
+    }
+    .menu_popup{
+        width:40%;
+        right: -40%;
+    }
+}
+
+@media all and (max-width:530px){
+    /*바꿀거
+    헤더 로고랑 메인 타이틀 before랑 포개짐
+    (before 높이 낮추기)
+    
+    */
+}
+
+
+@media all and (max-width:520px){
+    html{
+        font-size: 10.5px;
+    }
+}
+/*500px이하 모바일 미디어쿼리*/
+@media only screen and (max-width:500px) {
+
+    /*글자크기변경*/
+    html{
+        font-size: 10px;
+    }
+}
+
+
+    /*가로스크롤 없애기!*/
+    /*html,body를 화면기준가로폭*/
+    
+
+    
+
+    /*상단영역 높이변경*/
+    
+
+    /*로고 파티션박스 가로크기 변경*/
+    
+
+    /*햄버거버튼*/
+    
+
+    /*배너 비율변경하기*/
+    
+
+    /*파티션 박스(col-) 전체를 width:100%로 변경!*/
+    /*한줄에 하나씩!*/
+    
+
+    /*비율유지 해제*/
+    /*추가비율-컨텐츠박스 없앰*/
+    
+
+    /*비율박스의 속박스-일반박스화*/
+    
+
+    /*뉴스박스 패딩제거*/
+    
+
+    
+
+    /*뉴스글자 조정*/
+    
+
+    /*메뉴배너 가로폭 100%, 높이값 특정px*/
+    
+
+
+    /*하단영역*/
+    /*배경로고 조정*/
+    
+
+    /*하단주소 조정*/
+    
+
+
+
+/*500px이하 모바일 미디어쿼리*/
+@media only screen and (max-width:470px){
+    html{
+        font-size: 9px;
+    }
+    
+    .intro_main_tit img {
+        width: 90%;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width:430px){
+    html{
+        font-size: 8px;
+    }
+    
+}
+
+@media only screen and (max-width:400px){
+    .about_us_list img{
+        width: 90%;
+    }
+}
+
+
+@media only screen and (max-width:380px){
+    html{
+        font-size: 7px;
+    }
+}
+
+@media only screen and (max-width:360px){
+    
+}
+
+@media only screen and (max-width:320px){
+    html{
+        font-size: 6.5px;
+    }
+    .service_wrap{
+         overflow: hidden;
+    }
+}

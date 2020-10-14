@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* core.css - 중요공통기능*/
+
+/*** 속성***/
+
+
+/**********폰트**********/
+
+/*Noto Sans KR*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/*font-family: 'Noto Sans KR', sans-serif;*/
+
+/*kopub 바탕*/
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+/*font-family: 'KoPub Batang', serif; */
+
+/*khand*/
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
+/*font-family: 'Khand', sans-serif;*/
+
+
+/**********스크롤 css 디자인 변경***********/
+
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 5px;
+}
+body{
+	scrollbar-face-color: #333;
+    scrollbar-shadow-color: #000;
+    scrollbar-highlight-color: #666;
+    scrollbar-3dlight-color: #fff;
+    scrollbar-darkshadow-color: #fff;
+    scrollbar-track-color: #000;
+    scrollbar-arrow-color: #868686;
+}
+
+
+/***************/
+
+/*공통*/
+
+
+

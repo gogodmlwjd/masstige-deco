@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST PAGE</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/mainpage.js"></script>
+    <script src="js/youtube_api.js"></script>
+    <script src="js/header_scroll.js"></script>
+    <script src="js/fadein.js"></script>
+</head>
+
+<body>
+    <!--0. 전체 영역-->
+    <div class="main_wrap">
+        <!--1. 헤더 영역-->
+        <div class="top">
+            <header class="inbox" id="top">
+                <div class="hader_area">
+                    <!--1-1.회원바로가기 아이콘-->
+                    <ul class="header_sc_icon">
+                        <li><a href="#"><img src="images/header_sc_icon_01.png" alt="검색"></a></li>
+                        <li><a href="#"><img src="images/header_sc_icon_02.png" alt="내장바구니"></a></li>
+                        <li><a href="#" class="login_btn"><img src="images/header_sc_icon_03.png" alt="로그인"></a></li>
+                    </ul>
+                    <!--1-2. 메인로고-->
+                    <h1 class="main_logo"><a href="#">MASSTIGE DECO</a></h1>
+                    <!--1-3. GNB영역-->
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="bedroom.html">BED ROOM</a></li>
+                            <li><a href="#">LIVING ROOM</a></li>
+                            <li><a href="#">DININGROOM</a></li>
+                            <li><a href="#">HOME OFFICE</a></li>
+                            <li><a href="#">LIVING DECO</a></li>
+                            <li><a href="aboutus.html">ABOUT US</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <!--2.메인 컨텐츠 전체 영역-->
+        <div class="main_contents">
+            <!--2-1.메인배너영역-->
+            <section id="main_ban">
+                <!--배너슬라이드-->
+                <ul class="main_banslide">
+                    <li class="on">
+                        <div class="main_ban_tbox">
+                            <h2 class="main_ban_tit">MAIN BANNER TITTLE TEXT1</h2>
+                            <p class="main_ban_sub_tit">Main banner sub tittle text </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="main_ban_tbox">
+                            <h2 class="main_ban_tit">MAIN BANNER TITTLE TEXT2</h2>
+                            <p class="main_ban_sub_tit">Main banner sub tittle text </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="main_ban_tbox">
+                            <h2 class="main_ban_tit">MAIN BANNER TITTLE TEXT3</h2>
+                            <p class="main_ban_sub_tit">Main banner sub tittle text </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="main_ban_tbox">
+                            <h2 class="main_ban_tit">MAIN BANNER TITTLE TEXT4</h2>
+                            <p class="main_ban_sub_tit">Main banner sub tittle text </p>
+                        </div>
+                    </li>
+                </ul>
+                <!--메인배너텍스트-->
+
+                <!--메인배너블릿-->
+                <ul id="slide_btn">
+                    <li class="on"><span class="bld"></span></li>
+                    <li><span class="bld"></span></li>
+                    <li><span class="bld"></span></li>
+                    <li><span class="bld"></span></li>
+                </ul>
+            </section>
+            <!--2-2.인트로영역-->
+            <section id="intro_wrap">
+                <div class="intro_com_bg"></div>
+                <h2 class="intro_side_tit"><span>MASSTIGE DECO</span></h2>
+                <div class="intro_left_wrap">
+                    <h3>MASS + PRESTIGE = MASSTIGE</h3>
+                    <p>
+                        합리적인 가격대와 고품격의 디자인, 기능을 의미하는<br>
+                        '매스티지'와 홈스타일링 가구와 아이템을<br>
+                        의미하는 데코를 조합시켰습니다.
+                    </p>
+                    <div class="intro_left_bg"></div>
+                    <img src="images/intro_main_img.png" alt="의자" class="main_chair">
+                    <button class="btn intro_btn"><a href="#">SHOP NOW</a></button>
+                </div>
+                <div class="intro_right_wrap">
+                    <ul class="intro_product_img">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <!--2-3.신상품영역-->
+            <section id="new_avl_wrap">
+                <!--신상품영역 타이틀-->
+                <h2 class="sec_tit neavl_tit">NEW <span class="tit_color">ARRIVAL</span></h2>
+                <!--신상품메뉴리스트-->
+                <div class="new_menu_list_area">
+                    <ul class="new_menu_list">
+                        <li>
+                            <a href="#">
+                                <img src="images/new_arrival_icon_01.png" alt="베드룸">
+                                <span class="new_menu_list_on">BED ROOM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/new_arrival_icon_02.png" alt="리빙룸">
+                                <span>LIVING ROOM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/new_arrival_icon_03.png" alt="디닝룸">
+                                <span>DINING ROOM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/new_arrival_icon_04.png" alt="홈오피스">
+                                <span>HOME OFFICE</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/new_arrival_icon_05.png" alt="리빙데코">
+                                <span>LIVING DECO</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--신상품제품리스트-->
+                <div class="new_product_list_area">
+                    <div class="npbox">
+                        <ul class="new_product_list">
+                            <li class="new_product_list_box BED_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 100</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box BED_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 600</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box BED_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        Q BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box BED_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        SUPER K BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box LIVING_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        Q BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box LIVING_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        SUPER K BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box LIVING_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 100</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box LIVING_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 600</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box DINING_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 100</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box DINING_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 600</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box DINING_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        Q BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box DINING_ROOM">
+                                <a href="#">
+                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        SUPER K BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box HOME_OFFICE">
+                                <a href="#">
+                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        Q BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box HOME_OFFICE">
+                                <a href="#">
+                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        SUPER K BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box HOME_OFFICE">
+                                <a href="#">
+                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 100</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box HOME_OFFICE">
+                                <a href="#">
+                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 600</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box LIVING_DECO">
+                                <a href="#">
+                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        Q BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box LIVING_DECO">
+                                <a href="#">
+                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        SUPER K BED</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box LIVING_DECO">
+                                <a href="#">
+                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 100</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box LIVING_DECO">
+                                <a href="#">
+                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                    <h4 class="product_name">PATINA<br>
+                                        MULTI CABINET 600</h4>
+                                    <h4 class="price">10,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--2-4.소개글영역-->
+            <section id="about_us_wrap">
+                <ul class="about_us_area">
+                    <li class="about_left">
+                        <!--iframe width="auto" height="auto" src="https://www.youtube.com/embed/GHYjC0UAdS8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youtube"></iframe-->
+                        <!--common.js에 있는 Classname("youtubeP") 로 div 태그 만들기-->
+                        <div class="youtubeP" data-url="GHYjC0UAdS8"></div>
+                        <div class="about_left_box">
+                            <div class="about_left_text">
+                                <a href="#" class="youtube_btn">▷</a>
+                                <h4><small>with</small> MASSTIGE DECO</h4>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="about_right">
+                        <div class="about_right_box">
+                            <h4><big>A</big>BOUT <span class="tit_color">US</span></h4>
+                            <p>
+                                고객의 방과 집을, 더 나아가 세련되고 윤택한<br>
+                                라이프 스타일을 실현하는것이 우리의 목표입니다.<br><br>
+                                매스티지 데코는 자연스럽고 편안한 삶의 공간을 꾸밀 수 있도록.<br>
+                                가성비와 가심비가 뛰어난 제품을 선보일 수 있도록 노력합니다.
+                            </p>
+                            <button class="btn about_btn"><a href="#">READ MORE</a></button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!--2-5.인기상품영역-->
+            <section id="best_product_wrap">
+                <!--인기상품영역 타이틀-->
+                <h2 class="sec_tit btpro">BEST <span class="tit_color">PRODUCT</span></h2>
+                <!--인기상품리스트-->
+                <div class="best_product_content">
+                    <dl class="best_product_list">
+                        <a href="#">
+                            <dt>
+                                <img src="images/best_1.jpg" alt="인기상품1">
+                            </dt>
+                            <dd>
+                                <h4>NEW RETRO</h4>
+                                <h5>Product name</h5>
+                                <h6 class="price">10,000 <span class="tit_color">WON</span></h6>
+                            </dd>
+                        </a>
+                    </dl>
+                    <dl class="best_product_list">
+                        <a href="#">
+                            <dt>
+                                <img src="images/best_2.jpg" alt="인기상품1">
+                            </dt>
+                            <dd>
+                                <h4>NEW RETRO</h4>
+                                <h5>Product name</h5>
+                                <h6 class="price">10,000 <span class="tit_color">WON</span></h6>
+                            </dd>
+                        </a>
+                    </dl>
+                    <dl class="best_product_list">
+                        <a href="#">
+                            <dt>
+                                <img src="images/best_3.jpg" alt="인기상품1">
+                            </dt>
+                            <dd>
+                                <h4>NEW RETRO</h4>
+                                <h5>Product name</h5>
+                                <h6 class="price">10,000 <span class="tit_color">WON</span></h6>
+                            </dd>
+                        </a>
+                    </dl>
+                    <dl class="best_product_list">
+                        <a href="#">
+                            <dt>
+                                <img src="images/best_4.jpg" alt="인기상품1">
+                            </dt>
+                            <dd>
+                                <h4>NEW RETRO</h4>
+                                <h5>Product name</h5>
+                                <h6 class="price">10,000 <span class="tit_color">WON</span></h6>
+                            </dd>
+                        </a>
+                    </dl>
+                    <dl class="best_product_list">
+                        <a href="#">
+                            <dt>
+                                <img src="images/best_5.jpg" alt="인기상품1">
+                            </dt>
+                            <dd>
+                                <h4>NEW RETRO</h4>
+                                <h5>Product name</h5>
+                                <h6 class="price">10,000 <span class="tit_color">WON</span></h6>
+                            </dd>
+                        </a>
+                    </dl>
+                    <dl class="best_product_list">
+                        <a href="#">
+                            <dt>
+                                <img src="images/best_6.jpg" alt="인기상품1">
+                            </dt>
+                            <dd>
+                                <h4>NEW RETRO</h4>
+                                <h5>Product name</h5>
+                                <h6 class="price">10,000 <span class="tit_color">WON</span></h6>
+                            </dd>
+                        </a>
+                    </dl>
+                    <dl class="best_product_list">
+                        <a href="#">
+                            <dt>
+                                <img src="images/best_7.jpg" alt="인기상품1">
+                            </dt>
+                            <dd>
+                                <h4>NEW RETRO</h4>
+                                <h5>Product name</h5>
+                                <h6 class="price">10,000 <span class="tit_color">WON</span></h6>
+                            </dd>
+                        </a>
+                    </dl>
+                    <dl class="best_product_list">
+                        <a href="#">
+                            <dt>
+                                <img src="images/best_8.jpg" alt="인기상품1">
+                            </dt>
+                            <dd>
+                                <h4>NEW RETRO</h4>
+                                <h5>Product name</h5>
+                                <h6 class="price">10,000 <span class="tit_color">WON</span></h6>
+                            </dd>
+                        </a>
+                    </dl>
+                </div>
+            </section>
+            <!--2-6.매장안내영역-->
+            <section id="store_wrap">
+                <a class="store_banner" href="#">
+                    <div class="store_benner_tbox">
+                        <h3>NATIONAL STOROES</h3>
+                        <p>
+                            인테리어가 조금 더 쉬워지는 공간<br>
+                            집처럼 늘 한결같은 편안함과 익숙함을 약속드립니다.
+                        </p>
+                    </div>
+                </a>
+            </section>
+            <!--2-7.이벤트 영역-->
+            <section id="event_wrap">
+                <div class="event_area">
+                    <h2 class="sec_tit evtit">SPECIAL <span class="tit_color">EVENT</span></h2>
+                    <ul class="event_list">
+                        <li class="even_list_box">
+                            <a href="#" class="event_img1">
+                                <span>이벤트1</span>
+                            </a>
+                            <div class="enen_list_text">
+                                <h4>For your workspace more innovative</h4>
+                                <p>Nemo enim ipsam woluptatem quia voluptas sit<br>
+                                    aspernatur aut...
+                                </p>
+                                <a href="#" class="read_more_scut">READ MORE</a>
+                            </div>
+                        </li>
+                        <li class="even_list_box">
+                            <a href="#" class="event_img2">
+                                <span>이벤트2</span>
+                            </a>
+                            <div class="enen_list_text">
+                                <h4>For your workspace more innovative</h4>
+                                <p>Nemo enim ipsam woluptatem quia voluptas sit<br>
+                                    aspernatur aut...
+                                </p>
+                                <a href="#" class="read_more_scut">READ MORE</a>
+                            </div>
+                        </li>
+                        <li class="even_list_box">
+                            <a href="#" class="event_img3">
+                                <span>이벤트3</span>
+                            </a>
+                            <div class="enen_list_text">
+                                <h4>For your workspace more innovative</h4>
+                                <p>Nemo enim ipsam woluptatem quia voluptas sit<br>
+                                    aspernatur aut...
+                                </p>
+                                <a href="#" class="read_more_scut">READ MORE</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!--3.푸터 영역-->
+        <footer>
+            <div class="footer_area">
+                <div class="footer_top">
+                    <div class="footop1">
+                        <h3 class="footer_logo">MASSTIGE DECO</h3>
+                        <address>
+                            상호 주식회사 매스티지데코 대표이사김지수 정보책임자 1544-0366<br>
+                            사업자 등록번호 220-88-17461 사업자정보확인 통신판매업신고2011-서울강남-01454<br>
+                            주소 서울특별시 서초구 신반포로45길 9-4 , 더원빌딩 2F TEL 1544-0366 FAX 02-557-2712
+                        </address>
+                        <ul class="ess_info">
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="footop2">
+                        <h4>주문전 확인사항</h4>
+                        <ul>
+                            <li><a href="#">fAQ</a></li>
+                            <li><a href="#">이용안내</a></li>
+                        </ul>
+                    </div>
+                    <div class="footop3">
+                        <h4>CUSTIMER SERVICE</h4>
+                        <h5>1544-0366</h5>
+                        <p>
+                            mastideco@mastideco.co.kr<br>
+                            월~금 AM 9:30 ~ PM 04:30<br>
+                            점심시간 PM 12:00 ~ PM 01:00<br>
+                            ONLINE SHOP 공휴일, 토,일 휴무<br>
+                            HOME43 STORE 연중무휴<br>
+                            ※1월 1일, 설(당일), 추석(당일) 제외
+                        </p>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <div class="footbot_txt">
+                        <p>Copyright(c) by 주식회사 매스티지데코. All rights reserved.</p>
+                    </div>
+                    <ul class="foot_sns_list">
+                        <li><a href="#">아이콘1</a></li>
+                        <li><a href="#">아이콘2</a></li>
+                        <li><a href="#">아이콘3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="login_wrap">
+       <h1 class="xbtn"><a href="#"></a></h1>
+        <section class="login_area">
+            <form id="logF" method="post">
+                <h2 class="log_tit">LOGIN</h2>
+                <!--아이디박스-->
+                <div class="minput mpid">
+                    <!--label for="mid">아이디</label-->
+                    <input type="text" id="mid" maxlength="40" placeholder=" ID">
+                </div>
+                <!--비밀번호박스-->
+                <div class="minput mppw">
+                    <!--label for="mpw">비밀번호</label-->
+                    <input type="password" id="mpw" maxlength="20" placeholder=" PW">
+                </div>
+                <!--버튼영역-->
+                <div class="btnBox">
+                    <input type="button" id="sbtn" value="LOGIN">
+                </div>
+                <!--기타체크링크-->
+                <div class="addBox disableselect">
+                    <span></span>
+                    <div class="forgot_idpw">
+                        <a href="#" class="fid">Fogot ID</a>
+                        <a href="#" class="fpw">PW</a>
+                    </div>
+                    <a href="#">JOIN</a>
+                </div>
+            </form>
+        </section>
+
+    </div>
+</body>
+
+</html>

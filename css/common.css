@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* common.css - 공통 레이아웃 디자인 */
+
+
+/**** 디자인 공통****/
+body {
+    color: #4d4d4d;
+    font-size: 100%;
+    font-family: 'Khand', sans-serif;
+}
+
+/**************섹션 공통 사항********************/
+/****제목 공통사항****/
+
+.sec_tit {
+    color: #313131;
+    font-weight: 500;
+}
+
+
+.tit_color {
+    color: #7A8556;
+}
+
+/***************버튼 공통 디자인*********************/
+.btn {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.btn a {
+    width: 130px;
+    height: 50px;
+    border-radius: 25px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    font-family: 'Khand', sans-serif;
+    font-size: 1.25rem;
+    color: #fff;
+    background-color: #7A8556;
+    box-shadow: 2px 6px 6px rgba(122, 133, 86, 0.6);
+}
+
+.btn a:hover {
+    font-weight: 600;
+    transition: all .4s ease-in-out;
+}
