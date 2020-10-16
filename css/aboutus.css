@@ -7,7 +7,7 @@
 /*    outline: 1px dashed red;*/
 }
 
-#about_us_wrap {
+#about_us_pg_wrap {
     width: 100%;
 }
 
@@ -53,13 +53,14 @@
 }
 
 
-.sec_num {
+.sec_num.fir, .sec_num.sec, .sec_num.thi{
     font-size: 5.375rem;
     font-weight: 600;
     color: #F3F3F3;
     position: absolute;
-    top: -80px;/*애니메이션 효과줄 예정*/
+    top: -100px;/*애니메이션 효과줄 예정*/
     z-index: -1;
+    opacity: 0;
 }
 
 .sec_tit {

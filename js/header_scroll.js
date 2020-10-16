@@ -9,7 +9,7 @@ $(function () { /////////jQB ///////////////////////////////
 
 
     ///////////배너 밀어주기///////////
-    $("#main_ban").css({
+    $("#main_ban,#detail_content_wrap").css({
         marginTop: headerH
     }); //////css/////////////
 
@@ -22,7 +22,7 @@ $(function () { /////////jQB ///////////////////////////////
     $(window).scroll(function () {
 
         var scTop = $(this).scrollTop();
-        console.log("스크롤위치:" + scTop);
+        //console.log("스크롤위치:" + scTop);
         /////////////////////////////////////////////
         ///////// 헤더 스크롤 이벤트 //////////////////
 

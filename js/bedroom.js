@@ -1,243 +1,61 @@
-$(function () { /////// jQB ///////////////////////
-    console.log("로딩완료!");
+/// 서브메뉴 사이트 공통 JS ///
 
-    ///////////////////////////////////////////
-    //////////////// 배너 /////////////////////
+var pm = location.href;
 
-    console.log("로딩완료!");
-    // 배너 이미지 이동 대상: 배너박스(.main_banslide)
-    var tg = $(".main_banslide");
+//2. 물음표가 있어야 자를 수 있으므로 이것을 체크한다!
+// indexOf(문자열) 찾는 문자열순번 리턴하는 내장함수
+// 만약 찾는 문자열이 없을 경우엔 -1을 리턴한다! 이것을 없는지 여부를 걸러냄
+console.log("물음표체크:" + pm.indexOf("?"));
 
-    /*///////////////////////////////////////
-        함수명: goSlide
-        기능 : 슬라이드 방향별 이동 
-    */ ///////////////////////////////////////
+if (pm.indexOf("?") === -1) {
+    // 물음표 파라미터 없이 들어온경우 첫페이지로 돌아가!
+    location.href = "tester_page.html";
+} //// if ////////////////////
 
-    // 광클금지 변수
-    var sprot = 0; //0-허용,1-금지
-    // 슬라이드 순번 변수
-    var sno = 0;
-    //슬라이드 개수 변수
-    var scnt = tg.find("li").length;
-    console.log("슬개수:" + scnt);
-    //////////////////////////////////////////
-    var goSlide = function (seq, dir) {
+pm = pm.split("?")[1].split("=")[1];
+pm = Number(pm); //숫자형으로 변환(혹시모를 에러)
 
-
-        //// seq-순번, dir-방향(0-왼쪽,1-오른쪽)
-        console.log("이동방향" + dir);
-
-        // 오른쪽 전달값이 1이므로 true
-        if (dir === 1) {
-
-            //슬라이드 순번 증가
-            sno++;
-            if (sno === scnt) sno = 0; //한계수(처음으로)
-
-        } /////////if ///////////////
-        // 왼쪽 전달값이 0 이므로 false (else로 처리!)
-        else if (dir === 0) {
-
-            //슬라이드 개수 감소 
-            sno--;
-            if (sno === -1) sno = scnt - 1; // 한계수 (마지막번호로!)
-
-        } ///////// else if//////////////
-        else { // 블릿으로 이동 ////
-            sno = seq;
-        } //// 블릿으로 이동 //////////////
-
-
-        //해당순번 li에 class="on" 지정하기
-        tg.find("li").eq(sno).addClass("on")
-            .siblings().removeClass("on");
-
-        // 블릿변경
-        chgbtn();
-
-
-    }; ////////////////// goSlide 함수 ////////////////
-    /////////////////////////////////////////////////
-
-    /*///////////////////////////////////////
-        함수명: autoCall
-        기능 : 자동호출기능
-    */ ///////////////////////////////////////
-    var autoI; //인터벌용변수
-    var autoCall = function () {
-
-        console.log("자동넘김!");
-
-        //4초 간격으로 슬라이드 함수 호출
-        autoI = setInterval(function () {
-            goSlide(-1, 1);
-        }, 5000); ////// 인터발함수 //////
-
-    }; ////////////////// autoCall 함수 ////////////////
-    /////////////////////////////////////////////////
-
-    /*///////////////////////////////////////
-        함수명: clearAuto
-        기능 : 자동넘김 지우기
-    */ ///////////////////////////////////////
-    var autoT; //타임아웃용변수
-    var clearAuto = function () {
-        console.log("자동지워라!");
-
-        // 인터발 지우기
-        clearInterval(autoI);
-        // 타임아웃지우기(실행쓰나미방지!!!!)
-        clearTimeout(autoT);
-
-        // 재실행호출 셋팅(3초후 한번실행 셋팅!)
-        autoT = setTimeout(autoCall, 3000);
-
-    }; ////////////////// clearAuto 함수 ////////////////
-    /////////////////////////////////////////////////
-
-    /// 자동 넘김 함수 호출!
-    autoCall();
-    chgbtn();
-
-
-    /// 블릿 클릭시 /////////////////
-    $("#slide_btn li").click(function () {
-        var idx = $(this).index();
-        goSlide(idx, 2);
-        // 뒤 전달값은 0,1이 아닌값으로 보낸다!
-
-        // 자동넘김 지우기
-        clearAuto();
-
-    }); ////////// click ///////////////
-
-
-    /*///////////////////////////////////
-        함수명: chgbtn
-        기능: 블릿 현재페이지에 맞게 변경하기
-    ///////////////////////////////////////////////*/
-    function chgbtn() {
-
-        /// 블릿변경하기 - class="on" 주기
-        $("#slide_btn li").eq(sno).addClass("on")
-            .siblings().removeClass("on");
-
-    } ////////////////////////////////////// chgMenu 함수 /////////////////
-
-
-    // 스크롤 타겟 위치셋팅
-    var pos1, pos2;
-
-    var initSet = function () {
-        // 1번타겟(1)
-        $(".intro_side_tit").css({
-            top: "0",
-            opacity: 0,
-            transition: "all 0.8s ease-out"
-        });
-        pos1 = $(".intro_side_tit").offset().top;
-        console.log("1위치:" + pos1);
-
-        // 1번타겟(2,3)
-        $(".intro_left_wrap h3").css({
-            position: "relative",
-            left: "100px",
-            opacity: 0,
-            transition: "all 0.8s ease-out"
-        });
-        $(".intro_left_wrap p").css({
-            position: "relative",
-            left: "100px",
-            opacity: 0,
-            transition: "all 0.8s ease-out 0.5s"
-        });
-
-        // 1번타켓(4)
-        $(".intro_btn").css({
-            position: "relative",
-            left: "100px",
-            opacity: 0,
-            transition: "all 0.8s ease-out 0.7s"
-        });
+console.log(pm);
 
 
 
-        // 타겟2 
-        $(".neavl_tit").css({
-            left: "300px",
-            opacity: 0,
-            transition: "all 0.8s ease-out"
-        });
-        pos2 = $(".neavl_tit").offset().top;
-        console.log("2위치:" + pos2);
+
+$(function () { /////////jQB ///////////////////////////////
+    console.log("서브 사이트 로딩완료!");
+
+    //// 전역변수 구역 ///////////////
+    // 스크롤사용금지 설정(0-허용,1-금지)
+    var scNo = 0;
+    //////////////////////////////
 
 
+    /******************** 현재 문제점 : width가 울렁거림 *******************************/
 
-        // 타겟3 
-        $(".main_chair").css({
-            left: "420px",
-            opacity: 0,
-            transition: "all 0.8s ease-out 0.8s"
-        });
-        pos3 = $(".main_chair").offset().top;
-        console.log("3위치:" + pos3);
-
-
-
-        // 타겟4 
-        $(".intro_right_wrap").css({
-            top: "300px",
-            opacity: 0,
-            transition: "all 0.8s ease-out 1s"
-        });
-        pos4 = $(".intro_right_wrap").offset().top;
-        console.log("4위치:" + pos4);
-
-
-        // 타겟5
-        $(".about_right_box").css({
-            opacity: 0,
-            transition: "all 0.8s ease-out"
-        });
-        pos5 = $(".about_right_box").offset().top;
-        console.log("5위치:" + pos5);
-
-        // 5번타겟(1,2) //
-        $(".about_right_box h4").css({
-            opacity: 0,
-            transition: "all 0.8s ease-out"
-        });
-        $(".about_right_box p").css({
-            opacity: 0,
-            transition: "all 0.8s ease-out 0.5s"
-        });
-        $(".about_btn").css({
-            opacity: 0,
-            transition: "all 0.8s ease-out 0.8s"
-        });
-
-
-
-    }; /////// initSet 함수 ///////////
-
-    // 초기화함수 호출하기
-    initSet();
+    ////////// 스크롤 이벤트 함수/////////////////////////////////////////////
 
     // 헤더 높이값
     var headerH = $(".top").height();
-    //console.log("헤더높이:" + headerH);
+    console.log("헤더높이:" + headerH);
 
+    // 사이드메뉴 너비
+    var sideMW = $("#side_menu_wrap").width();
+    console.log("사이드메뉴너비:" + sideMW);
 
-    ///////////배너 밀어주기///////////
-    $("#main_ban").css({
-        marginTop: headerH
-    }); //////css/////////////
+    // 전체 콘텐츠랩 너비
+    var conW = $("#bedroom_content_wrap").width();
+    console.log("컨텐츠너비:" + conW);
 
     // 탑메뉴 변경 실행여부 체크 상태변수
     var tChange = 0; // 0 : 실행전 , 1 : 실행후
 
+    ///////////배너 밀어주기///////////
+    //    $("#bedroom_content_area").css({
+    //        marginTop: 0
+    //    }); //////css/////////////
+    /////////////////////////////////
 
-    ////////// 스크롤 이벤트 함수/////////////////////////////////////////////
+
+    $("#side_menu_wrap").find("div").hide();
     ///////////////////////////////////////////////////////////////////////
     $(window).scroll(function () {
 
@@ -246,51 +64,45 @@ $(function () { /////// jQB ///////////////////////
         /////////////////////////////////////////////
         ///////// 헤더 스크롤 이벤트 //////////////////
 
-        /////////////////////////////////
 
         ///// 탑메뉴 상단에 고정하기 ////////
         // 위치 : 기존헤더 크기를 넘어갈때
         if (scTop > headerH && tChange === 0) {
             tChange = 1; //잠금(한번만 실행)
             //console.log("헤더변경!");
+            $("#side_menu_wrap").animate({
+                width: "15%"
+            }, 200, function () {
+                console.log("tbox늦게 나타나기");
+                $("#side_menu_wrap").find("div").delay(400).fadeIn(600);
+            });
+            $("#bedroom_content_wrap").animate({
+                width: "85%"
+            }, 200); //// css ///////
 
-            // 1.탑메뉴(.top)에 미리 셋팅된 class를 넣어서 디자인변경
-            // 새로운 클래스 .newTop
-            $(".top").addClass("newTop")
-                // 2. css 포지션 fixed로 변경하고 위쪽에 숨기기
-                .css({
-                    position: "fixed",
-                    top: "-120px"
-                })
-                // 3.애니메이션으로 top값 0으로 등장
-                .animate({
-                    top: "0"
-                }, 600, "easeOutQuart");
 
-            $(".main_ban").css({
-                marginTop: "0"
-            }); //////css/////////////
-
+            $("#bedroom_content_wrap").css({
+                top: -headerH
+            }); //// css /////////
 
         } ///// if ////////////////////////
         //// 맨위로 돌아갈때 원상복구하기 /////
         else if (scTop < (headerH - 100) && tChange === 1) {
             tChange = 0; // 잠금(반대로!)
-            // 1. 먼저 위로 숨기기 애니메이션
-            $(".top").animate({
-                top: "-160px"
-            }, 100, "easeOutQuart", function () {
-                //애니후
-                // 2. 원래 포지션위치 변경하기
-                $(this).animate({
-                    position: "absolute",
-                    top: "0"
-                }).removeClass("newTop"); //3.클래스제거
-            }); //////// animate ////////////
-
-            $(".main_ban").css({
-                marginTop: headerH
-            }); //////css/////////////
+            //console.log("헤더변경!");
+            $("#side_menu_wrap").animate({
+                width: "0%"
+            }, 100, function () {
+                console.log("tbox늦게 나타나기");
+                $("#side_menu_wrap").find("div").delay(100).fadeOut(100);
+            });
+            $("#bedroom_content_wrap").animate({
+                width: "100%"
+            }, 100, function () {
+                $("#bedroom_content_wrap").delay(300).animate({
+                    top: 0
+                }); //// css /////////
+            }); //// css ///////
 
 
         } /////// else if /////////////////////
@@ -302,167 +114,190 @@ $(function () { /////// jQB ///////////////////////
         ////////////////////////////////////////////
         ///// 스크롤 무빙 이벤트 /////////////////////
 
-        // 타겟1등장
-        if (scTop > pos1 - 400 && scTop < pos1 + 400) {
-
-            //타겟 1-1
-            $(".intro_side_tit").css({
-                top: "340px",
-                opacity: 1
-            });
-
-            //타겟 1-2,1-3
-            $(".intro_left_wrap h3,.intro_left_wrap p").css({
-                left: "0",
-                opacity: 1
-            });
-
-            //타겟 1_4
-            $(".intro_btn").css({
-                left: "0",
-                opacity: 1
-            });
-        } //////// if //////////////////
-        //        else { // 원위치
-        //            $(".intro_side_tit").css({
-        //                top: "0",
-        //                opacity: 0
-        //            });
-        //        } /////// else //////////////////
-
-
-        // 타겟2
-        if (scTop > pos2 - 400 && scTop < pos2 + 400) {
-
-            //타겟 2
-            $(".neavl_tit").css({
-                left: "0",
-                opacity: 1
-            });
-        } //////// if //////////////////
-
-
-        // 타겟3
-        if (scTop > pos3 - 600 && scTop < pos3 + 600) {
-
-            //타겟 3
-            $(".main_chair").css({
-                left: "56px",
-                opacity: 1
-            });
-
-        } //////// if //////////////////
-
-        // 타겟4
-        if (scTop > pos4 - 400 && scTop < pos4 + 400) {
-
-            //타겟 4
-            $(".intro_right_wrap").css({
-                top: "0",
-                opacity: 1
-            });
-
-        } //////// if //////////////////
-
-
-        // 타겟5
-        if (scTop > pos5 - 400 && scTop < pos5 + 400) {
-
-            //타겟 5
-            $(".about_right_box,.about_right_box h4,.about_right_box p,.about_btn").css({
-                opacity: 1
-            });
-
-        } //////// if //////////////////
-
-
-        ///// 스크롤 무빙 이벤트 //////////////////////
-        ////////////////////////////////////////////
-
 
     }); /////// scroll ////////////
 
 
-
-    /// 신상품
-
-    $(".new_product_list_box").hide();
-    $(".BED_ROOM").show();
-
-    $(".new_menu_list li a").click(function (e) {
-        e.preventDefault(); // 튀는거 방지
-
-        var txt = $("span", this).text().replace(" ", "_");
-        console.log(txt);
-
-        // 클릭된 메뉴 이름과 같은 class만 보이기(나머지 숨기기)
-        $(".new_product_list_box").hide();
-        $("." + txt).show();
-
-
-        // 메뉴 디자인 변경 class 넣기(.new_menu_list_on)
-        $("span", this).addClass("new_menu_list_on")
-            .parents("li").siblings().find("span").removeClass();
-
-    }); ///////// click /////////////////////
-
-    var youT = $(".youtube").attr("allow")
-
-
-    ///////////////////////////////////////////////////////////////////
-    //////////// 유튜브 버튼 클릭시 동영상 재생 ///////////////////////////
-    $(".youtube_btn").click(function (e) {
-        e.preventDefault(); // 튀는거 방지
-
-        $(this).fadeOut(400).next("h4").fadeOut(600);
-        $(".about_left_box").fadeOut(1400);
-
-        //        var youTstart=youT.replace("autoplay","autoplay=1");
-        //        $(".youtube").attr("allow",youTstart);
-        //        
-        //        var temp = $(".youtube").attr("src");
-        //        console.log(temp);
-        //        $(".youtube").attr("src",temp+"?autoplay=1");
-
-        var videos = document.getElementsByClassName("youtubeP");
-        for (var i = 0; i < videos.length; i++) {
-            var player;
-            var youtube = videos[i];
-            var iframe = document.createElement("iframe");
-            var geturl = youtube.getAttribute("data-url")
-            iframe.setAttribute("src",
-                "https://www.youtube.com/embed/" + geturl +
-                "?enablejsapi=1&html5-1");
-            iframe.setAttribute('frameborder', 0);
-            youtube.appendChild(iframe);
-            youtube.onPlayerReady = function (event) {
-                event.target.mute();
+    // 카테고리명
+    var cat;
+    // 데이터 셋팅
+    var ginfo = {
+        "bed_room": [ //배열 8개
+            {
+                "가구이름": "완존편해침대",
+                "가격": "200,000"
+            },
+            {
+                "가구이름": "완존편해침대2",
+                "가격": "300,000"
+            },
+            {
+                "가구이름": "완존편해침대3",
+                "가격": "500,000"
+            },
+            {
+                "가구이름": "완존편해침대4",
+                "가격": "230,000"
+            },
+            {
+                "가구이름": "완존편해침대5",
+                "가격": "540,000"
+            },
+            {
+                "가구이름": "완존편해침대6",
+                "가격": "120,000"
+            },
+            {
+                "가구이름": "완존편해침대7",
+                "가격": "870,000"
+            },
+            {
+                "가구이름": "완존편해침대8",
+                "가격": "60,000"
             }
-            player = new YT.Player(youtube, {
-                playerVars: {
-                    'width': '400px',
-                    'height': '300px',
-                    'autoplay': 1,
-                    'controls': 0, //하단 컨트롤바 없애기
-                    'showinfo': 0, //상단 정보바 없애기
-                    'cc_load_policy': 0, //자막해제
-                    'iv_load_policy': 3, //영상위에 뜨는 홍보영상 안보이게 하기
-                    'autohide': 1,
-                    'wmode': 'opaque',
-                    'loop': 1,
-                    'mute': 1,
-                    'rel': 0,
-                    'playlist': geturl
-                },
-                videoId: geturl,
-                events: {
-                    'onReady': youtube.onPlayerReady
-                }
-            });
-            //player
-        } /// for문 ////
-    }); //// youtube click ////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////
+        ],
+        "living_room": [ //배열 6개
+            {
+                "가구이름": "조아조아식탁1",
+                "가격": "30,000"
+            },
+            {
+                "가구이름": "조아조아식탁2",
+                "가격": "300,000"
+            },
+            {
+                "가구이름": "조아조아식탁3",
+                "가격": "80,000"
+            },
+            {
+                "가구이름": "조아조아식탁4",
+                "가격": "200,000"
+            },
+            {
+                "가구이름": "조아조아식탁5",
+                "가격": "770,000"
+            },
+            {
+                "가구이름": "조아조아식탁6",
+                "가격": "50,000"
+            }
+        ],
+    }; //// ginfo객체 ////////////
+    
+    
+    /******!중요! html이 깨짐으로 setLink를 설정해줘야한다!!!******/
+    var setLink = function () {
 
-}); ////////// jQB ///////////////////////////////
-/////////////////////////////////////////////////
+        // 아이템 클릭시 상세페이지 넘어가기 ///
+        // 대상: .sub_prouct_list a
+        // 카테고리별 상세페이지는 하나씩만 만든다!
+        // 따라서 cat 변수에 담긴 분류만 상세페이지로 넘긴다!
+        $(".sub_prouct_list a").click(function (e) {
+            e.preventDefault();
+
+            location.href = "detailpage.html?cat=" + cat;
+        }); //////// click /////////////////////////
+
+    }; //////////// setLink함수 ////////
+
+    
+    
+    
+
+
+    //// 카테고리 메뉴 클릭시 리스트 변경하기 ///
+    $(".sub_menu_list a,.gnb a,.side_menu_list a")
+        .click(function (e) {
+            e.preventDefault();
+
+            var idx = $(this).parent().index(); //부모li순번
+            console.log("순번:" + idx);
+
+
+            cat = $("span", this).text();
+
+            // 예외처리
+            if (cat === "ABOUT US") location.href = "aboutus.html";
+
+            cat = cat.toLowerCase(); //모든영문자 소문자변환
+            //(전부대문자변환은 toUpperCase())
+            cat = cat.replace(" ", "_"); //공백을 언더바로 교체
+            console.log("카테고리:" + cat);
+            // 카테고리명은 곧 내가 만든 폴더명과 같다!
+
+            // 이미 있는 리스트를 돌면서 이미지를 변경함
+
+            // forIn문: 셋팅된 배열/객체의 수만큼 돈다!
+            // 대상: .sub_prouct_content
+            var tg = $(".sub_prouct_content");
+            tg.html(""); //내부파일 비우기!
+
+            for (var x in ginfo[cat]) {
+                console.log(ginfo[cat][x]["가구이름"] + "^" + ginfo[cat][x]["가격"]);
+
+                //내부요소추가!
+                tg.append(
+                    '<dl class="sub_prouct_list bedroom_list">' +
+                    '     <a href="detailpage.html">' +
+                    '        <dt>' +
+                    //'            <img src="images/'+cat+'/'+(x+1)+'.jpg" alt="침대1">' +
+                    '            <img src="images/' + cat + '/1.jpg" alt="침대1">' +
+                    '         </dt>' +
+                    '         <dd>' +
+                    '            <h5 class="Product_name">' + ginfo[cat][x]["가구이름"] + '</h5>' +
+                    '             <h6 class="price">' + ginfo[cat][x]["가격"] +
+                    '               <span class="tit_color">WON</span></h6>' +
+                    '        </dd>' +
+                    '    </a>' +
+                    '</dl>'
+                );
+
+
+
+            } //// forIn문 ///////////////
+
+
+
+            // 메뉴 동시 변경하기
+            $(".sub_menu_list li").eq(idx).find("span").addClass("on")
+                .parent().siblings().find("span").removeClass("on");
+
+            $(".gnb li").eq(idx).find("a").addClass("on")
+                .parent().siblings().find("a").removeClass("on");
+
+            $(".side_menu_list li").eq(idx).find("a").addClass("on")
+                .parent().siblings().find("a").removeClass("on");
+
+
+            // 하단 타이틀 변경하기
+            $(".sub_prouct_tit span").text($("span", this).text());
+            // 타이틀 이미지 변경하기
+            $(".sub_prouct_tit img").attr("src", "images/new_arrival_icon_0" + (idx + 1) + ".png");
+            // 타이틀 아이템개수출력
+            var cnt = 10;
+            if (ginfo[cat]) cnt = ginfo[cat].length;
+            $(".sub_prouct_tit small").text("(" + cnt + ")");
+
+
+            // 새로운 html에 링크 설정 다시하기!(중요!!!)
+            setLink();
+
+
+
+        }); ///////// click //////////////////
+
+
+    // 최초로딩시 첫페이지 호출하기(넘어온 순번을 넣는다!)
+    $(".sub_menu_list li").eq(pm).find("a").trigger("click");
+
+
+
+
+    // 최초 링크설정
+    setLink();
+
+
+
+
+
+}); ///// jQB ///////////////////////////////////
