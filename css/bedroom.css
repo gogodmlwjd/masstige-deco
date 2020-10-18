@@ -195,8 +195,18 @@ footer {
     transition: opacity .1s ease-in-out;
 }
 
+
+
 .sub_menu_list li:hover {
     flex: 1;
+    opacity: .4;
+}
+
+.sub_menu_list li a{
+    display: block;
+    
+}
+.sub_menu_list li .on{
     opacity: .4;
 }
 
@@ -211,11 +221,6 @@ footer {
     display: block;
     font-weight: 600;
 }
-
-.sub_menu_list li:first-child {
-    opacity: .4;
-}
-
 
 
 #sub_prouct_wrap {
@@ -266,7 +271,7 @@ footer {
 
 .Product_name {
     padding-top: 40px;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 

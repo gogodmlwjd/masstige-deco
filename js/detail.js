@@ -21,30 +21,50 @@ var setInfo = {
     // bed room ///////////////////
     "bed_room": {
         "텍스트": [
-            // 텍스트1
-            "살어리",
-            // 텍스트1
-            "살어리랏다",
-            // 텍스트1
-            "청산에",
-            // 텍스트1
-            "살어리랏다",
-            // 텍스트1
-            "얄라리얄라"
+            // 카테고리
+            "bed room",
+            // 제품명
+            "뉴레트로 슈퍼싱글 침대[메트릭스 제외]",
+            // 브랜드
+            "뉴트로",
+            // 제품명
+            "[SALE] 뉴레트로 슈퍼싱글 침대[메트릭스 제외]",
+            // 가격
+            "419,000",
+            // 제품소개
+            "오리지널리티를 살린 곡면엣지포인트와 집성 무늬목을 수작업으로 붙여 풍부한 무늬결이 표현되어있는 데니쉬감성의 라운드형 테이퍼드 다리의 슈퍼싱글 침대",
+            // 색상
+            " one (natural brown)",
+            "NEW RETRO",
+            "엣지있는 실루엣 라인<br>데니쉬 감성의 내츄럴 허니 컬러<br>모던 스칸디나비안 무드",
+            "NEW RETRO",
+            "Again, Retro Chic!",
+            "Restoration<br>of Retro Heritage",
+            "데니쉬 감성의 내츄럴 허니의 레트로와<br>자연스러운 나무의 매력을 살린<br>내츄럴 브라운의 뉴레트로",
+            "집성 무늬목을 수작업으로 붙여<br>표현한 풍부한 무늬결",
+            "오리지널리티를 살린 곡면<br>엣지포인트",
+            "레트로 헤리티지의 복원",
+            "기존의 오리지널 데니쉬 감성에서<br>뉴레트로 시리즈는 북유럽 특유의 조형성은 살리되<br>자연친화적이고 헬시한 최신 트렌드에 어울리도록<br>내츄럴 브라운 컬러와 풍부한 나뭇결의 질감을 구현했습니다.",
+            "뉴레트로 소파테이블",
+            "인도네시아",
+            "w1200xd600xh380(mm)",
+            "다리 - 마호가니원목<br>/ 기타 - 민디집성무늬목,MDF",
+            "내추럴 브라운"
         ],
         "이미지": [
             // 이미지
-            "url(../images/sofa_table/preview/preview_02.jpg) no-repeat center / cover",
+            "url(../images/bed_room/preview/preview_02.jpg) no-repeat center / cover",
             // 이미지
-            "url(../images/sofa_table/preview/preview_03.jpg) no-repeat center / cover",
+            "url(../images/bed_room/preview/preview_03.jpg) no-repeat center / cover",
             // 이미지
-            "url(../images/sofa_table/preview/preview_04.png) no-repeat center / cover",
+            "url(../images/bed_room/preview/preview_04.png) no-repeat center / cover",
             // 큰이미지
-            "url(../images/sofa_table/preview/preview_01.jpg) no-repeat center / cover",
+            "url(../images/bed_room/preview/preview_01.jpg) no-repeat center / cover",
 
         ]
     }, ////////// bed_room 객체 /////
     // living room ///////////////////
+/*
     "living_room": {
         "텍스트": [
             // 텍스트1
@@ -70,7 +90,7 @@ var setInfo = {
 
         ]
     }, ////////// living_room 객체 /////
-
+*/
 
 }; ////// setInfo //////////
 
@@ -98,7 +118,8 @@ $(function () { /////////jQB ///////////////////////////////
     /// 데이터 셋팅하기 
     // 텍스트 데이터 셋팅
     for(var i=0; i< tgd.length; i++){
-        tgd.eq([i]).text(setInfo[pm]["텍스트"][i]);
+//        tgd.eq([i]).text(setInfo[pm]["텍스트"][i]);
+        tgd.eq(i).html(setInfo[pm]["텍스트"][i]);
     } ////// for /////////////////
 
     // 이미지 데이터 셋팅
