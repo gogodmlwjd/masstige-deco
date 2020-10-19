@@ -86,7 +86,7 @@
 }
 
 /***gnb hover효과***/
-.gnb a:hover {
+.gnb a:hover , .gnb .on{
     color: #2a2a2a;
 }
 
