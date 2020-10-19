@@ -80,13 +80,13 @@ var setInfo = {
         ],
         "이미지": [
             // 이미지
-            "url(../images/detail_sample/preview/preview_02.jpg) no-repeat center / cover",
+            "url(images/detail_sample/preview/preview_02.jpg) no-repeat center / cover",
             // 이미지
-            "url(../images/detail_sample/preview/preview_03.jpg) no-repeat center / cover",
+            "url(images/detail_sample/preview/preview_03.jpg) no-repeat center / cover",
             // 이미지
-            "url(../images/detail_sample/preview/preview_04.png) no-repeat center / cover",
+            "url(images/detail_sample/preview/preview_04.png) no-repeat center / cover",
             // 큰이미지
-            "url(../images/detail_sample/preview/preview_01.jpg) no-repeat center / cover",
+            "url(images/detail_sample/preview/preview_01.jpg) no-repeat center / cover",
 
         ]
     }, ////////// living_room 객체 /////
