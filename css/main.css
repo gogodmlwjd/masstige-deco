@@ -500,7 +500,7 @@
 .new_product_list {
     /*ul*/
     display: flex;
-    width: 102%;
+    width: 100%;
     /*5세트로 계산*/
     text-align: center;
 }
@@ -508,6 +508,10 @@
 .new_product_list li {
     flex: 1;
     margin-right: 2%;
+}
+
+.new_product_list li:nth-child(4n){
+    margin-right: 0;
 }
 
 .BED_ROOM a {
@@ -530,9 +534,6 @@
     background-color: purple !important;
 }
 
-.new_product_list li:last-child {
-    margin: 0;
-}
 
 .new_product_list_box a {
     display: block;
