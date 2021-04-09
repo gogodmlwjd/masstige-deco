@@ -35,15 +35,15 @@ $(function () { /////////jQB ///////////////////////////////
 
     // 헤더 높이값
     var headerH = $(".top").height();
-    console.log("헤더높이:" + headerH);
+    //console.log("헤더높이:" + headerH);
 
     // 사이드메뉴 너비
     var sideMW = $("#side_menu_wrap").width();
-    console.log("사이드메뉴너비:" + sideMW);
+    //console.log("사이드메뉴너비:" + sideMW);
 
     // 전체 콘텐츠랩 너비
     var conW = $("#bedroom_content_wrap").width();
-    console.log("컨텐츠너비:" + conW);
+    //console.log("컨텐츠너비:" + conW);
 
     // 탑메뉴 변경 실행여부 체크 상태변수
     var tChange = 0; // 0 : 실행전 , 1 : 실행후
@@ -60,7 +60,7 @@ $(function () { /////////jQB ///////////////////////////////
     $(window).scroll(function () {
 
         var scTop = $(this).scrollTop();
-        console.log("스크롤위치:" + scTop);
+        //console.log("스크롤위치:" + scTop);
         /////////////////////////////////////////////
         ///////// 헤더 스크롤 이벤트 //////////////////
 
@@ -90,19 +90,19 @@ $(function () { /////////jQB ///////////////////////////////
         else if (scTop < (headerH - 100) && tChange === 1) {
             tChange = 0; // 잠금(반대로!)
             //console.log("헤더변경!");
-//            $("#side_menu_wrap").animate({
-//                width: "0%"
-//            }, 100, function () {
-//                console.log("tbox늦게 나타나기");
-//                $("#side_menu_wrap").find("div").delay(100).fadeOut(100);
-//            });
-            $("#side_menu_wrap").find("div").fadeOut(400,function (){
+            //            $("#side_menu_wrap").animate({
+            //                width: "0%"
+            //            }, 100, function () {
+            //                console.log("tbox늦게 나타나기");
+            //                $("#side_menu_wrap").find("div").delay(100).fadeOut(100);
+            //            });
+            $("#side_menu_wrap").find("div").fadeOut(400, function () {
                 //console.log("영역 사라져라 얍!");
                 $("#side_menu_wrap").animate({
                     width: "0%"
-                },100); //// css /////////
+                }, 100); //// css /////////
             }); //// css ///////
-            
+
             $("#bedroom_content_wrap").animate({
                 width: "100%"
             }, 600, function () {
@@ -130,11 +130,11 @@ $(function () { /////////jQB ///////////////////////////////
     var ginfo = {
         "bed_room": [ //배열 8개
             {
-                 "가구이름": "뉴레트로 슈퍼싱글 침대<br>[메트릭스 제외]",
-                 "가격": "419,000"
+                "가구이름": "뉴레트로 슈퍼싱글 침대<br>[메트릭스 제외]",
+                "가격": "419,000"
             },
             {
-                 "가구이름": "뉴레트로 뷰로 화장대",
+                "가구이름": "뉴레트로 뷰로 화장대",
                 "가격": "417,000"
             },
             {
@@ -154,11 +154,11 @@ $(function () { /////////jQB ///////////////////////////////
                 "가격": "13,600"
             },
             {
-                 "가구이름": "뉴레트로 화장대 세트",
+                "가구이름": "뉴레트로 화장대 세트",
                 "가격": "348,000"
             },
             {
-                 "가구이름": "뉴레트로 더블 캐비닛 A",
+                "가구이름": "뉴레트로 더블 캐비닛 A",
                 "가격": "146,000"
             }
         ],
@@ -282,9 +282,21 @@ $(function () { /////////jQB ///////////////////////////////
                 "가격": "238,000"
             }
         ],
+
+        //        "이미지": [
+        //            // 이미지
+        //            "url(../images/sub_page/bed_room_ban.jpg) no-repeat center/cover",
+        //            // 이미지
+        //            "url(../images/sub_page/livingroom_ban.jpg) no-repeat center/cover",
+        //            // 이미지
+        //            "url(../images/sub_page/dinning_room_ban.jpg) no-repeat center/cover",
+        //            // 이미지
+        //            "url(../images/sub_page/homeoffice_ban.jpg) no-repeat center/cover",
+        //            // 이미지
+        //            "url(../images/sub_page/livingdeco_ban.jpg) no-repeat center/cover"
+        //        ]
     }; //// ginfo객체 ////////////
-    
-    
+
     /******!중요! html이 깨짐으로 setLink를 설정해줘야한다!!!******/
     var setLink = function () {
 
@@ -299,11 +311,6 @@ $(function () { /////////jQB ///////////////////////////////
         }); //////// click /////////////////////////
 
     }; //////////// setLink함수 ////////
-
-    
-    
-    
-
 
     //// 카테고리 메뉴 클릭시 리스트 변경하기 ///
     $(".sub_menu_list a,.gnb a,.side_menu_list a")
@@ -334,14 +341,14 @@ $(function () { /////////jQB ///////////////////////////////
 
             for (var x in ginfo[cat]) {
                 console.log(ginfo[cat][x]["가구이름"] + "^" + ginfo[cat][x]["가격"]);
-                console.log(Number(x)+1);
+                console.log(Number(x) + 1);
 
                 //내부요소추가!
                 tg.append(
                     '<dl class="sub_prouct_list bedroom_list">' +
                     '     <a href="detailpage.html">' +
                     '        <dt>' +
-                    '            <img src="images/'+cat+'/'+(Number(x)+1)+'.jpg" alt="침대1">' +
+                    '            <img src="images/' + cat + '/' + (Number(x) + 1) + '.jpg" alt="침대1">' +
                     //'            <img src="images/' + cat + '/1.jpg" alt="침대1">' +
                     '         </dt>' +
                     '         <dd>' +
@@ -360,12 +367,12 @@ $(function () { /////////jQB ///////////////////////////////
 
 
             // 메뉴 동시 변경하기
-//            $(".sub_menu_list li").eq(idx).find("span").addClass("on")
-//                .parent().siblings().find("span").removeClass("on");
+            //            $(".sub_menu_list li").eq(idx).find("span").addClass("on")
+            //                .parent().siblings().find("span").removeClass("on");
 
             $(".sub_menu_list li").eq(idx).find("a").addClass("on")
                 .parent().siblings().find("a").removeClass("on");
-        
+
             $(".gnb li").eq(idx).find("a").addClass("on")
                 .parent().siblings().find("a").removeClass("on");
 
@@ -382,13 +389,11 @@ $(function () { /////////jQB ///////////////////////////////
             if (ginfo[cat]) cnt = ginfo[cat].length;
             $(".sub_prouct_tit small").text("(" + cnt + ")");
 
-
             // 새로운 html에 링크 설정 다시하기!(중요!!!)
             setLink();
 
-
-
         }); ///////// click //////////////////
+
 
 
     // 최초로딩시 첫페이지 호출하기(넘어온 순번을 넣는다!)
@@ -396,12 +401,7 @@ $(function () { /////////jQB ///////////////////////////////
 
 
 
-
     // 최초 링크설정
     setLink();
-
-
-
-
-
+    
 }); ///// jQB ///////////////////////////////////

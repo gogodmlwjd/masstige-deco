@@ -12,15 +12,97 @@
 
 /******************************/
 
-/*1200px이하 사이즈*/
+
 
 @media only screen and (max-width:1920px) {
-    .gnb {
-            font-size: 1.25rem;
+}
+
+
+@media only screen and (max-width:1659px) {
+    #new_avl_wrap {
+        margin: auto;
+    }
+    
+    .npbox{
+        width:90%;
+    }
+    .new_product_list li{
+        height: 520px;
+    }
+    
+    .new_product_list_box a {
+    height: 100%;
+}
+
+
+@media only screen and (max-width:1500px) {
+    
+    
+    
+}
+
+@media only screen and (max-width:1400px) {
+    #intro_wrap {
+        width: 1200px;
+        max-width: 100%;
+        margin: 80px auto 130px auto;
+        height: 800px;
+        max-height: 100%;
+        position: relative;
+    }
+    
+}
+    
+@media only screen and (max-width:1460px){
+    .product_name span{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media only screen and (max-width:1440px){
+    /*리스트 보이는 갯수 수정*/
+    .npbox{
+        width:80%;
+        top: 54%;
+    }
+    
+    .new_product_list {
+        display: flex;
+        width: 120%;
+        height: 100%;
+    }
+}
+
+    @media only screen and (max-width:1380px) {
+        .new_product_list li {
+            height: 480px;
         }
+    }    
+@media only screen and (max-width:1324px) {
+    
+    .new_menu_list a > p span{
+        display: block;
+    }
+    
+    
+    
+    .intro_right_wrap {
+        float: right;
+        margin-top: 60px;
+        margin-bottom: 100px;
+        width: 570px;
+        max-width: 100%;
+        position: relative;
+    }
 
 }
-@media only screen and (max-width:1280px) {
+
+    @media only screen and (max-width:1300px) {
+        
+    }
+
+    @media only screen and (max-width:1280px) {
 
     /*
     전체글자조정
@@ -47,11 +129,74 @@
      html {
         font-size: 14.5px;
     }
+    .new_product_list {
+        width: 124%;
+    }
 }
 
 /*1200px이하*/
-
-
+    @media all and (max-width:1270px) {
+        .new_product_list_box a > .price{
+            font-size: 1.5rem;
+        }
+        .new_product_list li {
+            height: 480px;
+        }
+    }
+    
+    
+    
+    
+@media all and (max-width:1130px) {
+    .intro_com_bg {
+        width: 95%;
+    }
+    /*new_product_list li 갯수 변경*/
+/*    .new_product_list li {
+        height: 460px;
+    }*/
+    
+    #new_avl_wrap {
+        height: auto;
+    }
+    
+    #new_avl_wrap > div {
+        padding-top: 0;
+    }
+    .new_product_list_area{
+        width: 100%;
+        position: relative;
+    }
+    .npbox{
+        left: auto;
+        top: auto;
+        transform: translate(0 , 0);
+        position: static;
+        margin: 0 auto;
+    }
+    
+    .new_product_list {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .new_product_list li{
+        flex: auto;
+        width: 48%;
+        margin-right: 2%;
+        margin-bottom: 4%;
+    }
+    .new_product_list li a{
+        width: 100%;
+    }
+    .new_product_list li:nth-child(2n){
+        margin-right: 0;
+    }
+    .new_product_list li:nth-child(2n) ~ li{
+        margin-bottom: 0;
+    }
+}
+    
+    
 /*1100px 이하 미디어쿼리*/
 @media all and (max-width:1110px) {
 
@@ -115,12 +260,31 @@
     }
     .work_area p {
         text-align: center;
-    }    
+    } 
+    
+    
         
 }
 
 /*1100px이하*/
-
+    @media only screen and (max-width:1100px) {
+        .intro_area{
+            width: 600px;
+            margin: 0 auto;
+        }
+        .intro_area > div{
+            width: 100%;
+        }
+        .intro_left_wrap{
+            margin: auto;
+        }
+        .intro_right_wrap{
+            margin-top: 90%;
+        }
+    }
+    
+    
+    
 @media only screen and (max-width:1080px) {
     /*메뉴바 햄버거바로 변경!*/
     .gnb{
@@ -235,7 +399,18 @@
 }
 
 
+@media all and (max-width:820px){
+    .intro_left_bg{
+        right: 0;
+    }
+}
+
 @media all and (max-width:800px){
+    
+}
+@media all and (max-width:730px){
+    .intro_left_bg {
+        right: 0;
     
 }
 
@@ -373,6 +548,9 @@
 @media only screen and (max-width:400px){
     .about_us_list img{
         width: 90%;
+    }
+    .service_list li{
+        cursor: pointer;
     }
 }
 

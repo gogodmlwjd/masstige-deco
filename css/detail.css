@@ -81,7 +81,6 @@
     background: url(../images/sofa_table/preview/preview_04.png) no-repeat center / cover;
 }
 
-
 .main_preview {
     width: 490px;
     height: 490px;
@@ -114,6 +113,9 @@
 .buy_price span {
     color: #ABBC89;
     font-weight: 500;
+}
+.total_price.buy_price::after{
+    display: none;
 }
 
 .buy_price::after {
@@ -179,7 +181,9 @@
     display: flex;
 }
 
-.amont_updown {}
+.amont_updown {
+    margin-right: 2%;
+}
 
 .amont_updown dl,
 .amont_buy_btn_wrap button a {
@@ -530,12 +534,12 @@
     border: 4px solid #2d2d2d;
     position: absolute;
     background-color: #fff;
+    padding: 3%;
 }
 
 .info_color_tit {
     font-size: 4rem;
     font-weight: 500;
-    padding: 10px 0 0 10px;
     position: relative;
 }
 
@@ -548,12 +552,12 @@
 }
 
 .info_wrap .info_color_tit::after {
-    left: 37%;
+    left: 38%;
     width: 50%;
 }
 
 .color_wrap .info_color_tit::after {
-    left: 28%;
+    left: 32%;
     width: 60%;
 }
 

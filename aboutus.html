@@ -7,7 +7,7 @@
     <title>About us</title>
     <style>
         * {
-/*                        outline: 1px dashed blue;*/
+            /*                        outline: 1px dashed blue;*/
         }
 
     </style>
@@ -18,41 +18,65 @@
     <script src="js/header_scroll.js"></script>
     <script src="js/common.js"></script>
     <script src="js/aboutus.js"></script>
+    <script src="js/gambit-smoothscroll-min.js"></script>
+    <script>
+        $(function() { /////// jQB ///////////////////////
+            console.log(" 서브페이지 접속 로딩완료!");
+
+            $(".gnb a").click(function(e) {
+                e.preventDefault();
+                var idx = $(this).parent().index();
+                console.log(idx);
+                //                
+                if (idx === 5) {
+                    location.href = "aboutus.html";
+                } //// if /////////////
+                else {
+                    location.href = "bedroom.html?pno=" + idx;
+                } //////// else /////////////////////
+
+            }); ///////// click //////////////
+
+
+        }); ////////// jQB ///////////////////////////////
+        /////////////////////////////////////////////////
+
+    </script>
 </head>
 
 <body>
     <div id="about_us_pg_wrap">
         <!--1. 헤더 영역-->
-            <div class="top">
-                <header class="inbox" id="top">
-                    <div class="hader_area">
-                        <!--1-1.회원바로가기 아이콘-->
-                        <ul class="header_sc_icon">
-                            <li>
-                                <a href="#">
-                                    <img src="images/header_sc_icon_01.png" alt="검색">
-                                    <!--input type="text" id="search" maxlength="40"-->
-                                </a>
-                            </li>
-                            <li><a href="#"><img src="images/header_sc_icon_02.png" alt="내 장바구니"></a></li>
-                            <li><a href="#" class="login_btn"><img src="images/header_sc_icon_03.png" alt="로그인"></a></li>
+        <div class="top">
+            <header class="inbox" id="top">
+                <div class="hader_area">
+                    <!--1-1.회원바로가기 아이콘-->
+                    <ul class="header_sc_icon">
+                        <li>
+                            <a href="#" class="search">
+                                <img src="images/header_sc_icon_01.png" alt="검색">
+                            </a>
+                            <!--input type="text" id="search" maxlength="40"-->
+                        </li>
+                        <li><a href="#"><img src="images/header_sc_icon_02.png" alt="내 장바구니"></a></li>
+                        <li><a href="#" class="login_btn"><img src="images/header_sc_icon_03.png" alt="로그인"></a></li>
+                    </ul>
+                    <!--1-2. 메인로고-->
+                    <h1 class="main_logo"><a href="tester_page.html">MASSTIGE DECO</a></h1>
+                    <!--1-3. GNB영역-->
+                    <nav>
+                        <ul class="gnb">
+                            <li><a href="bedroom.html" class="bdr"><span>BED ROOM</span></a></li>
+                            <li><a href="bedroom.html" class="lvr"><span>LIVING ROOM</span></a></li>
+                            <li><a href="bedroom.html" class="dnr"><span>DINING ROOM</span></a></li>
+                            <li><a href="bedroom.html" class="hof"><span>HOME OFFICE</span></a></li>
+                            <li><a href="bedroom.html" class="lbd"><span>LIVING DECO</span></a></li>
+                            <li><a href="aboutus.html" class="on"><span>ABOUT US</span></a></li>
                         </ul>
-                        <!--1-2. 메인로고-->
-                        <h1 class="main_logo"><a href="tester_page.html">MASSTIGE DECO</a></h1>
-                        <!--1-3. GNB영역-->
-                        <nav>
-                            <ul class="gnb">
-                                <li><a href="bedroom.html"><span>BED ROOM</span></a></li>
-                                <li><a href="bedroom.html"><span>LIVING ROOM</span></a></li>
-                                <li><a href="bedroom.html"><span>DINING ROOM</span></a></li>
-                                <li><a href="bedroom.html"><span>HOME OFFICE</span></a></li>
-                                <li><a href="bedroom.html"><span>LIVING DECO</span></a></li>
-                                <li><a href="aboutus.html" class="on"><span>ABOUT US</span></a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
-            </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
         <!--2.메인 컨텐츠 전체 영역-->
         <div id="main_about_cont_wrap">
 

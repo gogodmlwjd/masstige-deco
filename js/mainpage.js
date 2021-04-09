@@ -229,8 +229,8 @@ $(function () { /////// jQB ///////////////////////
     $(window).scroll(function () {
 
         var scTop = $(this).scrollTop();
-        console.log("스크롤위치:" + scTop);
-        
+        //console.log("스크롤위치:" + scTop);
+
         ////////////////////////////////////////////
         ///// 스크롤 무빙 이벤트 /////////////////////
 
@@ -324,7 +324,7 @@ $(function () { /////// jQB ///////////////////////
     $(".new_menu_list li a").click(function (e) {
         e.preventDefault(); // 튀는거 방지
 
-        var txt = $("span", this).text().replace(" ", "_");
+        var txt = $("p", this).text().replace(" ", "_");
         console.log(txt);
 
         // 클릭된 메뉴 이름과 같은 class만 보이기(나머지 숨기기)
@@ -333,8 +333,8 @@ $(function () { /////// jQB ///////////////////////
 
 
         // 메뉴 디자인 변경 class 넣기(.new_menu_list_on)
-        $("span", this).addClass("new_menu_list_on")
-            .parents("li").siblings().find("span").removeClass();
+        $("p", this).addClass("new_menu_list_on")
+            .parents("li").siblings().find("p").removeClass("new_menu_list_on");
 
     }); ///////// click /////////////////////
 
@@ -396,5 +396,65 @@ $(function () { /////// jQB ///////////////////////
     }); //// youtube click ////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////
 
+
+
+    ///////////////////////////////////////////////////////////////////
+    /////////// 팝업창 이벤트//////// ///////////////////////////////////
+
+
+    //    // 스크롤 숨기기 이벤트 ////
+    //    var schide = $("body").css({
+    //        overflowY: "hidden"
+    //    }); /// css //////
+    //
+    //    ///스크롤 막기 이벤트///
+    //    var scstop = $("body").on('scroll touchmove mousewheel', function (event) {
+    //        event.preventDefault();
+    //        event.stopPropagation();
+    //        return false;
+    //    });
+    //    ///스크롤 막기 풀기 이벤트///
+    //    var scmove = $("body").off('scroll touchmove mousewheel');
+
+
+
+
+    // 이벤트 팝업창
+    $(".even_list_box").click(function (e) {
+        e.preventDefault(); // 튀는거 방지
+        $(".event_popup").fadeIn();
+        $("body").css({
+            overflowY: "hidden"
+        }); /// css //////
+
+        ///스크롤 내리기 막기 이벤트///
+        $("body").on('scroll touchmove mousewheel', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+        });
+
+    }); //////// click ///////////////////////
+    $(".exbtn").click(function () {
+        $(".event_popup").fadeOut();
+        
+        $("body").css({
+            overflowY: "auto"
+        }); /// css //////
+        ///스크롤 막기 풀기 이벤트///
+        $("body").off('scroll touchmove mousewheel');
+    }); //////// click ///////////////////////
+
+
+    $(".storoes_popup").hide();
+
+    $(".store_banner").click(function (e) {
+        e.preventDefault(); // 튀는거 방지
+        $(".storoes_popup").fadeIn();
+    }); /// click /////////////////////////
+
+    $(".storexbtn").click(function () {
+        $(".storoes_popup").fadeOut();
+    }); //// click ////////////////////////
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////
