@@ -1,16 +1,40 @@
 $(function () { /////////jQB ///////////////////////////////
     console.log("공통사항 로딩완료!");
 
+
+
+
+
+    //////////// gnb 클릭시 항목별로 이동! ////////////////////////////
+    $(".gnb a").click(function (e) {
+        e.preventDefault();
+        var idx = $(this).parent().index();
+        //                
+        if (idx === 5) {
+            location.href = "aboutus.html";
+        } //// if /////////////
+        else {
+            location.href = "bedroom.html?idx=" + idx;
+        } //////// else /////////////////////
+
+    }); ///////// click //////////////
+
+
+
+
+
+
     ///////////// 검색 아이콘 클릭시 활성화 ///////////////////
     $(".search_btn").click(function (e) {
         e.preventDefault(); // 튀는거 방지
         $(this).find("img")
             .animate({
-                left: "24px"
+                left: "24px",
+                opacity: 0
             }, 400); /// animate /////
 
         $("#search").css({
-            width: "180px"
+            width: "30vw"
         }); /// css //////
         $(".sxbtn").fadeIn(1000);
     }); //// click ///////////////////
@@ -23,7 +47,8 @@ $(function () { /////////jQB ///////////////////////////////
         }); /// css //////
         $(".search_btn").find("img")
             .animate({
-                left: "0"
+                left: "0",
+                opacity: "1"
             }, 400); /// animate ////
 
 
@@ -34,19 +59,19 @@ $(function () { /////////jQB ///////////////////////////////
     // 헤더 높이값
     var headerH = $(".top").height();
     //console.log("헤더높이:" + headerH);
-    
+
     var NhaderH = $(".newTop").height();
-    
-    
-    
+
+
+
     $(".slxbtn").css({
             marginTop: "60px"
         }) /// css ///////////
         .hide();
-    
+
     $(".shop_btn").click(function (e) {
         e.preventDefault(); // 튀는거 방지
-        
+
         $(".shop_list_wrap").stop().animate({
             right: "0"
         }); /// animate ///////
@@ -57,7 +82,7 @@ $(function () { /////////jQB ///////////////////////////////
         e.preventDefault(); // 튀는거 방지
         $(this).fadeOut();
         $(".shop_list_wrap").animate({
-            right : "-36%"
+            right: "-36%"
         }); /// animate ///////
     }); ///// click //////////////////////
 
@@ -67,7 +92,6 @@ $(function () { /////////jQB ///////////////////////////////
     ///// 로그인창 클릭, 활성화 ////////////////////////
     $(".login_btn").click(function (e) {
         e.preventDefault(); // 튀는거 방지
-
         $(".login_wrap").fadeIn();
         $("body").css({
             overflowY: "hidden"
@@ -89,7 +113,7 @@ $(function () { /////////jQB ///////////////////////////////
             overflowY: "auto"
         }); /// css ///////
     }); //// click ///////////////////////
-    
+
     ///////////////// 메뉴 클릭시 이미지 변경 ///////////////////////////////
     $(".bdr").click(function () {
         $(".subpg_ban").css({
@@ -128,6 +152,27 @@ $(function () { /////////jQB ///////////////////////////////
             "background-position": "center"
         }); /// css
     }); /// click ////////
+
+
+
+    // 모바일 버전 버튼
+    $(".hamburger_btn").click(function (e) {
+        event.preventDefault();
+        $(".hamburger_wrap").animate({
+            left: "0"
+        }, 600); /// animate////
+        $(".ham_xbtn").animate({
+            opacity: "1"
+        }, 800); /// animate////
+    }); /// click ////////
     
+    $(".ham_xbtn").click(function () {
+        $(".hamburger_wrap").animate({
+            left: "-70%"
+        }, 600); /// animate////
+        $(this).animate({
+            opacity: "0"
+        }, 800); /// animate////
+    }); /// click ////////////
 }); ///////// jQB ////////////////////////////////////////////
 ////////////////////////////////////////////////////////////

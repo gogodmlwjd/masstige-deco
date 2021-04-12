@@ -4,37 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST PAGE 수정</title>
+    <title>MESSTIGE DECO</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/media.css">
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <!--script src="js/resize.js"></script-->
     <script src="js/common.js"></script>
     <script src="js/mainpage.js"></script>
     <script src="js/youtube_api.js"></script>
     <script src="js/header_scroll.js"></script>
-    <script src="js/gambit-smoothscroll-min.js"></script>
-    <script>
-        $(function() { /////// jQB ///////////////////////
-            console.log("로딩완료!");
-
-            $(".gnb a").click(function(e) {
-                e.preventDefault();
-                var idx = $(this).parent().index();
-                //                
-                if (idx === 5) {
-                    location.href = "aboutus.html";
-                } //// if /////////////
-                else {
-                    location.href = "bedroom.html?idx=" + idx;
-                } //////// else /////////////////////
-
-            }); ///////// click //////////////
-
-        }); ////////// jQB ///////////////////////////////
-        /////////////////////////////////////////////////
-
-    </script>
+    <!--script src="js/gambit-smoothscroll-min.js"></script-->
 </head>
 
 <body>
@@ -57,8 +37,11 @@
                         <li><a href="#" class="shop_btn"><img src="images/header_sc_icon_02.png" alt="내 장바구니"></a></li>
                         <li><a href="#" class="login_btn"><img src="images/header_sc_icon_03.png" alt="로그인"></a></li>
                     </ul>
+                    <a href="#" class="hamburger_btn"></a>
                     <!--1-2. 메인로고-->
-                    <h1 class="main_logo"><a href="tester_page.html">MASSTIGE DECO</a></h1>
+                    <h1 class="main_logo">
+                        <a href="tester_page.html">MASSTIGE DECO</a>
+                    </h1>
                     <!--1-3. GNB영역-->
                     <nav>
                         <ul class="gnb">
@@ -133,7 +116,7 @@
                     </div>
                     <div class="intro_right_wrap">
                         <ul class="intro_product_img">
-                            <li><a href="#"></a></li>
+                            <li><a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=living_room"></a></li>
                             <li><a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=dining_room"></a></li>
                             <li><a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=bed_room"></a></li>
                         </ul>
@@ -185,7 +168,7 @@
                         <ul class="new_product_list">
                             <li class="new_product_list_box BED_ROOM">
                                 <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=bed_room">
-                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">NEWRETRO<br>
                                         <span>슈퍼싱글 침대<br>[메트릭스 제외]</span>
                                     </h4>
@@ -193,8 +176,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box BED_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=bed_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">NEWRETRO<br>
                                         <span>뷰로 화장대</span>
                                     </h4>
@@ -202,8 +185,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box BED_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=bed_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">NEWRETRO<br>
                                         <span>6칸 와이드 서랍장</span>
                                     </h4>
@@ -211,8 +194,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box BED_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=bed_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">NEWRETRO<br>
                                         <span>와이드 전신거울</span>
                                     </h4>
@@ -221,8 +204,8 @@
                             </li>
 
                             <li class="new_product_list_box LIVING_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=living_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">beans<br>
                                         <span>3인소파(베이지)</span>
                                     </h4>
@@ -230,8 +213,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box LIVING_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=living_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">beans<br>
                                         <span>3인소파(브라운)</span>
                                     </h4>
@@ -239,8 +222,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box LIVING_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=living_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">PATINA<br>
                                         <span>MULTI CABINET 1100</span>
                                     </h4>
@@ -248,8 +231,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box LIVING_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=living_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">PATINA<br>
                                         <span>사이드 콘솔</span>
                                     </h4>
@@ -258,8 +241,8 @@
                             </li>
 
                             <li class="new_product_list_box DINING_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=dining_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">ROIDE<br>
                                         <span>다이닝 테이블</span>
                                     </h4>
@@ -267,8 +250,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box DINING_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=dining_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">ROIDE<br>
                                         <span>테이블 4인세트</span>
                                     </h4>
@@ -276,8 +259,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box DINING_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=dining_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">ROIDE<br>
                                         <span>테이블 2인세트</span>
                                     </h4>
@@ -285,8 +268,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box DINING_ROOM">
-                                <a href="#">
-                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=dining_room">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">ROIDE<br>
                                         <span>유리 장식장</span>
                                     </h4>
@@ -295,8 +278,8 @@
                             </li>
 
                             <li class="new_product_list_box HOME_OFFICE">
-                                <a href="#">
-                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=home_office">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">PLANTA<br>
                                         <span>매거진랙</span>
                                     </h4>
@@ -304,8 +287,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box HOME_OFFICE">
-                                <a href="#">
-                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=home_office">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">PATINA<br>
                                         <span>데스크 1200</span>
                                     </h4>
@@ -313,8 +296,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box HOME_OFFICE">
-                                <a href="#">
-                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=home_office">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">NEWRETRO<br>
                                         <span>스퀘어 북 캐비넷</span>
                                     </h4>
@@ -322,8 +305,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box HOME_OFFICE">
-                                <a href="#">
-                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=home_office">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">NEWRETRO<br>
                                         <span>스퀘어 데스크</span>
                                     </h4>
@@ -332,17 +315,8 @@
                             </li>
 
                             <li class="new_product_list_box LIVING_DECO">
-                                <a href="#">
-                                    <img src="images/new_avi_sample03.jpg" alt="제품썸네일1">
-                                    <h4 class="product_name">ROIDE<br>
-                                        <span>스퀘어 탁상시계</span>
-                                    </h4>
-                                    <h4 class="price">41,000 <span class="tit_color">WON</span></h4>
-                                </a>
-                            </li>
-                            <li class="new_product_list_box LIVING_DECO">
-                                <a href="#">
-                                    <img src="images/new_avi_sample04.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=living_deco">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">ROIDE<br>
                                         <span>플랫 벽시계</span>
                                     </h4>
@@ -350,8 +324,18 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box LIVING_DECO">
-                                <a href="#">
-                                    <img src="images/new_avi_sample01.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=living_deco">
+
+                                    <div class="product_img"></div>
+                                    <h4 class="product_name">ROIDE<br>
+                                        <span>스퀘어 탁상시계</span>
+                                    </h4>
+                                    <h4 class="price">41,000 <span class="tit_color">WON</span></h4>
+                                </a>
+                            </li>
+                            <li class="new_product_list_box LIVING_DECO">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=living_deco">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">TAVOLO<br>
                                         <span>우드슬랩 시계</span>
                                     </h4>
@@ -359,8 +343,8 @@
                                 </a>
                             </li>
                             <li class="new_product_list_box LIVING_DECO">
-                                <a href="#">
-                                    <img src="images/new_avi_sample02.jpg" alt="제품썸네일1">
+                                <a href="https://gogodmlwjd.github.io/masstige-deco/detailpage.html?cat=living_deco">
+                                    <div class="product_img"></div>
                                     <h4 class="product_name">MACARON<br>
                                         <span>뉴마카롱 메모</span>
                                     </h4>
@@ -389,10 +373,10 @@
                         <div class="about_right_box">
                             <h4><big>A</big>BOUT <span class="tit_color">US</span></h4>
                             <p>
-                                고객의 방과 집을, 더 나아가 세련되고 윤택한<br>
-                                라이프 스타일을 실현하는것이 우리의 목표입니다.<br><br>
-                                매스티지 데코는 자연스럽고 편안한 삶의 공간을 꾸밀 수 있도록.<br>
-                                가성비와 가심비가 뛰어난 제품을 선보일 수 있도록 노력합니다.
+                                고객의 방과 집을, 더 나아가<span class="space"></span> 세련되고 윤택한<br>
+                                라이프 스타일을<span class="space"></span> 실현하는것이 우리의 목표입니다.<br><br><span class="line_break"></span>
+                                매스티지 데코는 자연스럽고<span class="space"></span> 편안한 삶의 공간을 꾸밀 수 있도록.<br><span class="space"></span>
+                                가성비와 가심비가 뛰어난 제품을<span class="space"></span>선보일 수 있도록 노력합니다.
                             </p>
                             <button class="btn about_btn"><a href="aboutus.html">READ MORE</a></button>
                         </div>
@@ -609,6 +593,7 @@
     </div>
 
     <!--기타 팝업창-->
+
     <div class="storoes_popup">
         <h1>매장안내</h1>
         <img class="storexbtn" src="images/xbtn_bk.png" alt="매장팝업창x버튼">
@@ -737,6 +722,18 @@
                 </div>
             </form>
         </section>
+    </div>
+    <div class="hamburger_wrap">
+        <ul class="hamburger_list gnb">
+            <li><a href="bedroom.html" class="bdr"><span>BED ROOM</span><img src="images/new_arrival_icon_01.png" alt="리빙데코"></a></li>
+            <li><a href="bedroom.html" class="lvr"><span>LIVING ROOM</span><img src="images/new_arrival_icon_02.png" alt="리빙데코"></a></li>
+            <li><a href="bedroom.html" class="dnr"><span>DINING ROOM</span><img src="images/new_arrival_icon_03.png" alt="리빙데코"></a></li>
+            <li><a href="bedroom.html" class="hof"><span>HOME OFFICE</span><img src="images/new_arrival_icon_04.png" alt="리빙데코"></a></li>
+            <li><a href="bedroom.html" class="lbd"><span>LIVING DECO</span><img src="images/new_arrival_icon_05.png" alt="리빙데코"></a></li>
+            <li><a href="aboutus.html"><span>ABOUT US</span></a>
+            </li>
+        </ul>
+        <img src="images/xbtn_bk.png" alt="x버튼" class="ham_xbtn">
     </div>
 </body>
 

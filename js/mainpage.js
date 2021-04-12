@@ -286,7 +286,7 @@ $(function () { /////// jQB ///////////////////////
         } //////// if //////////////////
 
         // 타겟4
-        if (scTop > pos4 - 400 && scTop < pos4 + 400) {
+        if (scTop > pos4 - 800 && scTop < pos4 + 800) {
 
             //타겟 4
             $(".intro_right_wrap").css({
@@ -456,5 +456,15 @@ $(function () { /////// jQB ///////////////////////
     $(".storexbtn").click(function () {
         $(".storoes_popup").fadeOut();
     }); //// click ////////////////////////
+    
+    for (var i = 1; i < 21; i++) {
+        $(".new_product_list li:nth-child(" + i + ")").find(".product_img")
+            .css({
+                "background": "url(images/new_arrival/" + i + ".jpg)",
+                "background-repeat": "no-repeat",
+                "background-position": "center",
+                "background-size": "cover"
+            }); //// css ///////
+    } /////// for ////////////////
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////
