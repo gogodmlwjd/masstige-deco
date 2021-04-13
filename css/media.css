@@ -984,6 +984,10 @@
         margin-bottom: 4%;
     }
 
+    .best_product_list:nth-child(3n) {
+        margin-right: 2%;
+    }
+
     .best_product_list:nth-child(2n) {
         margin-right: 0;
     }
