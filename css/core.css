@@ -18,7 +18,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
 /*font-family: 'Khand', sans-serif;*/
 
-
+/*
+@font-face {
+    font-family: Khand;
+    src: url(../font/Khand.woff2) format("woff2");
+}
+*/
+/*Barlow Condensed*/
+@font-face {
+    font-family: Barlow_Condensed;
+    src: url(../font/Barlow_Condensed.woff2) format("woff2");
+}
 /**********스크롤 css 디자인 변경***********/
 
 

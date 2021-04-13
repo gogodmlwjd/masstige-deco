@@ -100,7 +100,7 @@
 
 .main_logo {
     text-align: center;
-    font-family: 'Barlow Condensed', sans-serif;/*
+    font-family: Barlow_Condensed, sans-serif;/*
     font-family: 'Khand', sans-serif;*/
     font-size: 4.25rem;
     font-weight: 500;
@@ -747,7 +747,6 @@
 
 .about_right_box h4 {
     font-size: 3rem;
-
     font-weight: 500;
 }
 
@@ -759,7 +758,7 @@
 .about_right_box p {
     padding-top: 30px;
     line-height: 24px;
-    font-weight: 600;
+    font-weight: 500;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 
 }
@@ -853,6 +852,7 @@
 .best_product_list h5 {
     font-size: 1.75rem;
     padding: 4px 0;
+    font-weight: 500;
 }
 
 .best_product_list .price {
@@ -1084,7 +1084,7 @@ footer {
 
 .footer_logo {
     font-size: 3.75rem;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: Barlow_Condensed , sans-serif;
     color: #fff;
     font-weight: 500;
     padding: 40px 0;
@@ -1223,7 +1223,7 @@ footer {
     width: 100%;
     text-align: center;
     color: #ccc;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: Barlow_Condensed, sans-serif;
     font-weight: 500;
     transform: translate(-50% , -50%); 
 }

@@ -930,7 +930,6 @@
 
     .about_right_box h4 {
         font-size: 6rem;
-        font-weight: 500;
     }
 
     .about_right_box p {
@@ -939,6 +938,7 @@
         font-size: 2.6rem;
         line-height: 3.4rem;
         text-align: center;
+        font-weight: 400;
     }
 
     .about_right_box p br {
